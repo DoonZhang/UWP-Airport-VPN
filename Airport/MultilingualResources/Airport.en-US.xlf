@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="zh-CN" target-language="en-US" original="AIRPORT/STRINGS/ZH-CN/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6901.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="AIRPORT/STRINGS/ZH-CN/RESOURCES.RESW" datatype="resx">
+        <trans-unit id="About.Content" translate="yes" xml:space="preserve">
+          <source>关于</source>
+          <target state="new">关于</target>
+        </trans-unit>
+        <trans-unit id="AboutInfo.Text" translate="yes" xml:space="preserve">
+          <source>本软件仅为用户提供Shadowsocks等第三方软件的账号以供浏览全球网络及网络加速使用，而Shadowsocks等第三方软件的开发及维护不归于本平台管理，但本平台会尽力协助用户正确配置和使用账号，详情请联系客服或进行反馈。联系邮箱：admin@mepstudio.cn</source>
+          <target state="new">本软件仅为用户提供Shadowsocks等第三方软件的账号以供浏览全球网络及网络加速使用，而Shadowsocks等第三方软件的开发及维护不归于本平台管理，但本平台会尽力协助用户正确配置和使用账号，详情请联系客服或进行反馈。联系邮箱：admin@mepstudio.cn</target>
+        </trans-unit>
+        <trans-unit id="Encryption.Text" translate="yes" xml:space="preserve">
+          <source>加密方式：</source>
+          <target state="new">加密方式：</target>
+        </trans-unit>
+        <trans-unit id="EnterInfo.Content" translate="yes" xml:space="preserve">
+          <source>同意并使用</source>
+          <target state="new">同意并使用</target>
+        </trans-unit>
+        <trans-unit id="FeedBack.Content" translate="yes" xml:space="preserve">
+          <source>异常反馈</source>
+          <target state="new">异常反馈</target>
+        </trans-unit>
+        <trans-unit id="Free.Text" translate="yes" xml:space="preserve">
+          <source>共享账号</source>
+          <target state="new">共享账号</target>
+        </trans-unit>
+        <trans-unit id="GuideUseRegulations.Text" translate="yes" xml:space="preserve">
+          <source>用户使用前请务必知晓并遵守以下条款：
+
+1、软件仅提供账号信息，请不要将软件账号在非法途径使用，不要浏览色情暴力、宗教迷信或政治敏感网站或信息，否则触及法律问题与开发者无关。
+2、由于受政策原因，请大家不要将账号分享给其他用户或网站使用，否则账号可能会被GFW(长城防火墙)屏蔽，导致无法使用。
+3、如账号出现无法使用的情况，请及时联系客服或提交异常反馈。
+4、用户支付少量费用均是用户自愿以捐赠的名义予以本平台做以支持和维护基本运行，若由于政策及不可抗拒因素导致软件平台最终无法使用，是无法做退回处理的，请悉知。
+
+为了您的稳定使用，请大家自觉遵守，营造绿色上网环境。</source>
+          <target state="new">用户使用前请务必知晓并遵守以下条款：
+
+1、软件仅提供账号信息，请不要将软件账号在非法途径使用，不要浏览色情暴力、宗教迷信或政治敏感网站或信息，否则触及法律问题与开发者无关。
+2、由于受政策原因，请大家不要将账号分享给其他用户或网站使用，否则账号可能会被GFW(长城防火墙)屏蔽，导致无法使用。
+3、如账号出现无法使用的情况，请及时联系客服或提交异常反馈。
+4、用户支付少量费用均是用户自愿以捐赠的名义予以本平台做以支持和维护基本运行，若由于政策及不可抗拒因素导致软件平台最终无法使用，是无法做退回处理的，请悉知。
+
+为了您的稳定使用，请大家自觉遵守，营造绿色上网环境。</target>
+        </trans-unit>
+        <trans-unit id="Home.Content" translate="yes" xml:space="preserve">
+          <source>主页</source>
+          <target state="new">主页</target>
+        </trans-unit>
+        <trans-unit id="IP.Text" translate="yes" xml:space="preserve">
+          <source>服  务  器：</source>
+          <target state="new">服  务  器：</target>
+        </trans-unit>
+        <trans-unit id="Menu.Text" translate="yes" xml:space="preserve">
+          <source>菜单</source>
+          <target state="new">菜单</target>
+        </trans-unit>
+        <trans-unit id="More.Content" translate="yes" xml:space="preserve">
+          <source>更多</source>
+          <target state="new">更多</target>
+        </trans-unit>
+        <trans-unit id="MoreSubscription.Content" translate="yes" xml:space="preserve">
+          <source>更多订阅</source>
+          <target state="new">更多订阅</target>
+        </trans-unit>
+        <trans-unit id="Notice.Text" translate="yes" xml:space="preserve">
+          <source>公告：暂无公告！</source>
+          <target state="new">公告：暂无公告！</target>
+        </trans-unit>
+        <trans-unit id="Password.Text" translate="yes" xml:space="preserve">
+          <source>密        码：</source>
+          <target state="new">密        码：</target>
+        </trans-unit>
+        <trans-unit id="Port.Text" translate="yes" xml:space="preserve">
+          <source>端        口：</source>
+          <target state="new">端        口：</target>
+        </trans-unit>
+        <trans-unit id="Pro.Text" translate="yes" xml:space="preserve">
+          <source>订阅账号</source>
+          <target state="new">订阅账号</target>
+        </trans-unit>
+        <trans-unit id="Push.Header" translate="yes" xml:space="preserve">
+          <source>推送通知</source>
+          <target state="new">推送通知</target>
+        </trans-unit>
+        <trans-unit id="Push_Info.Text" translate="yes" xml:space="preserve">
+          <source>打开并接收推送通知，可及时收到账号更新等通知。</source>
+          <target state="new">打开并接收推送通知，可及时收到账号更新等通知。</target>
+        </trans-unit>
+        <trans-unit id="ReadMe.Content" translate="yes" xml:space="preserve">
+          <source>阅读条款</source>
+          <target state="new">阅读条款</target>
+        </trans-unit>
+        <trans-unit id="RemoveAD.Content" translate="yes" xml:space="preserve">
+          <source>跳过广告</source>
+          <target state="new">跳过广告</target>
+        </trans-unit>
+        <trans-unit id="Settings.Text" translate="yes" xml:space="preserve">
+          <source>设置</source>
+          <target state="new">设置</target>
+        </trans-unit>
+        <trans-unit id="Settings_Btn.Content" translate="yes" xml:space="preserve">
+          <source>设置</source>
+          <target state="new">设置</target>
+        </trans-unit>
+        <trans-unit id="SubscriptAccount.Content" translate="yes" xml:space="preserve">
+          <source>订阅账号</source>
+          <target state="new">订阅账号</target>
+        </trans-unit>
+        <trans-unit id="Suggest.Text" translate="yes" xml:space="preserve">
+          <source>更多订阅里包含时或包量套餐，每日签到可获得免费流量，强烈推荐</source>
+          <target state="new">更多订阅里包含时或包量套餐，每日签到可获得免费流量，强烈推荐</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">订阅建议</note>
+        </trans-unit>
+        <trans-unit id="Switch.Text" translate="yes" xml:space="preserve">
+          <source>切换线路</source>
+          <target state="new">切换线路</target>
+        </trans-unit>
+        <trans-unit id="Tittle.Text" translate="yes" xml:space="preserve">
+          <source>一键获取节点</source>
+          <target state="new">一键获取节点</target>
+        </trans-unit>
+        <trans-unit id="UseRegulations.Content" translate="yes" xml:space="preserve">
+          <source>使用条例</source>
+          <target state="new">使用条例</target>
+        </trans-unit>
+        <trans-unit id="UseRegulationsInfo.Text" translate="yes" xml:space="preserve">
+          <source>软件仅提供账号信息，请不要将软件账号在非法途径使用，不要浏览恐怖暴力、宗教迷信或政治敏感网站或信息，否则触及法律问题与开发者无关，请大家阻绝遵守，营造绿色上网环境。</source>
+          <target state="new">软件仅提供账号信息，请不要将软件账号在非法途径使用，不要浏览恐怖暴力、宗教迷信或政治敏感网站或信息，否则触及法律问题与开发者无关，请大家阻绝遵守，营造绿色上网环境。</target>
+        </trans-unit>
+        <trans-unit id="UserGuide.Content" translate="yes" xml:space="preserve">
+          <source>使用说明</source>
+          <target state="new">使用说明</target>
+        </trans-unit>
+        <trans-unit id="AppName" translate="yes" xml:space="preserve">
+          <source>国际机场</source>
+          <target state="new">国际机场</target>
+        </trans-unit>
+        <trans-unit id="RemoveADInfo" translate="yes" xml:space="preserve">
+          <source>订阅'跳过任务'服务
+
+订阅'跳过任务'服务可享受:
+
+1、跳过广告任务直接获取账号(不包括软件内其他位置的些非必需操作性广告)
+2、获得提醒功能。
+注意:由于账号所涉及的服务器资源市场价格波动，订阅价格可能会根据市场稍作调整，如用户对改变后的价格不满意可以取消次月订阅，请以当前订阅价格为准，一经订阅，在订阅当月不予退款。
+是否同意并订阅?</source>
+          <target state="new">订阅'跳过任务'服务
+
+订阅'跳过任务'服务可享受:
+
+1、跳过广告任务直接获取账号(不包括软件内其他位置的些非必需操作性广告)
+2、获得提醒功能。
+注意:由于账号所涉及的服务器资源市场价格波动，订阅价格可能会根据市场稍作调整，如用户对改变后的价格不满意可以取消次月订阅，请以当前订阅价格为准，一经订阅，在订阅当月不予退款。
+是否同意并订阅?</target>
+        </trans-unit>
+        <trans-unit id="SubscriptAccountInfo" translate="yes" xml:space="preserve">
+          <source>订阅账号可享受：
+
+1、获得稳定的专线账号
+2、跳过广告任务获取账号(不包括软件内其他位置的一些非必需操作性广告)
+3、获得账号更新推送提醒功能。
+
+注意:由于账号所涉及的服务器资源市场价格波动，订阅价格可能会根据市场稍作调整，如用户对改变后的价格不满意可以取消次月订阅，请以当前订阅价格为准，一经订阅，在订阅当月不予退款
+
+是否同意并订阅?</source>
+          <target state="new">订阅账号可享受：
+
+1、获得稳定的专线账号
+2、跳过广告任务获取账号(不包括软件内其他位置的一些非必需操作性广告)
+3、获得账号更新推送提醒功能。
+
+注意:由于账号所涉及的服务器资源市场价格波动，订阅价格可能会根据市场稍作调整，如用户对改变后的价格不满意可以取消次月订阅，请以当前订阅价格为准，一经订阅，在订阅当月不予退款
+
+是否同意并订阅?</target>
+        </trans-unit>
+        <trans-unit id="SubscriptMore" translate="yes" xml:space="preserve">
+          <source>官网包含更多类别包时或包量套餐，支付简单，价格优惠，免费账户每日签到可获流星，推荐订阅。
+
+购买软件和在官网订阅的区别在于：
+
+购买软件的特点是可以享受一次购买永久使用共享账号，但是由于共享账号的用户较多，网速和稳定性不能保证，适合一般上网用户，购买软件并订阅账号的用户除了拥有永久使用共享账号的功能外，还包括免注册直接使用不限速不限流量的独享账号，适合视频和游戏用户。
+
+官网订阅的特点是价格多样和套餐丰富，有包时和包量两大类套餐，可以根据自身情况选择合适的套餐，但官网订阅需要重新注册账号并且官网订阅的规则较多，可能会因为违反审计规则而被暂时限速，详情请进入官网查看。
+
+注意:目前软件和官网数据暂时不互通。</source>
+          <target state="new">官网包含更多类别包时或包量套餐，支付简单，价格优惠，免费账户每日签到可获流星，推荐订阅。
+
+购买软件和在官网订阅的区别在于：
+
+购买软件的特点是可以享受一次购买永久使用共享账号，但是由于共享账号的用户较多，网速和稳定性不能保证，适合一般上网用户，购买软件并订阅账号的用户除了拥有永久使用共享账号的功能外，还包括免注册直接使用不限速不限流量的独享账号，适合视频和游戏用户。
+
+官网订阅的特点是价格多样和套餐丰富，有包时和包量两大类套餐，可以根据自身情况选择合适的套餐，但官网订阅需要重新注册账号并且官网订阅的规则较多，可能会因为违反审计规则而被暂时限速，详情请进入官网查看。
+
+注意:目前软件和官网数据暂时不互通。</target>
+        </trans-unit>
+        <trans-unit id="Share.Content" translate="yes" xml:space="preserve">
+          <source>分享</source>
+          <target state="new">分享</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

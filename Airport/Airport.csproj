@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{5162AD9F-F86B-450D-8014-240D4C8D683D}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Airport</RootNamespace>
+    <AssemblyName>Airport</AssemblyName>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>Airport_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>93F578B403DBB5ACA283527EE66B61CBCE3DBDE4</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>zh-CN</MultilingualFallbackLanguage>
+    <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
+    <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\account.cs" />
+    <Compile Include="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\GuidePage.xaml.cs">
+      <DependentUpon>GuidePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SplashPage.xaml.cs">
+      <DependentUpon>SplashPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TaskPage.xaml.cs">
+      <DependentUpon>TaskPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Airport_StoreKey.pfx" />
+    <None Include="Airport_TemporaryKey.pfx" />
+    <PRIResource Include="Strings\zh-CN\Resources.resw" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Images\btn\fly.png" />
+    <Content Include="Assets\Images\guide\1.png" />
+    <Content Include="Assets\Images\guide\2.png" />
+    <Content Include="Assets\Images\others\close.png" />
+    <Content Include="Assets\Images\others\Info.png" />
+    <Content Include="Assets\Images\others\wxgzh.jpg" />
+    <Content Include="Assets\Images\others\zfb.jpg" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\Images\prefix\unknown.png" />
+    <Content Include="Assets\Images\prefix\不丹.png" />
+    <Content Include="Assets\Images\prefix\东帝汶.png" />
+    <Content Include="Assets\Images\prefix\中国.png" />
+    <Content Include="Assets\Images\prefix\中非-非洲共和国.png" />
+    <Content Include="Assets\Images\prefix\丹麦.png" />
+    <Content Include="Assets\Images\prefix\乌克兰.png" />
+    <Content Include="Assets\Images\prefix\乌兹别克斯坦.png" />
+    <Content Include="Assets\Images\prefix\乌干达.png" />
+    <Content Include="Assets\Images\prefix\乌拉圭.png" />
+    <Content Include="Assets\Images\prefix\乍得.png" />
+    <Content Include="Assets\Images\prefix\也门.png" />
+    <Content Include="Assets\Images\prefix\亚美尼亚.png" />
+    <Content Include="Assets\Images\prefix\以色列.png" />
+    <Content Include="Assets\Images\prefix\伊拉克.png" />
+    <Content Include="Assets\Images\prefix\伊朗.png" />
+    <Content Include="Assets\Images\prefix\伯利兹.png" />
+    <Content Include="Assets\Images\prefix\佛得角.png" />
+    <Content Include="Assets\Images\prefix\俄国.png" />
+    <Content Include="Assets\Images\prefix\保加利亚.png" />
+    <Content Include="Assets\Images\prefix\克罗地亚.png" />
+    <Content Include="Assets\Images\prefix\冈比亚.png" />
+    <Content Include="Assets\Images\prefix\冰岛.png" />
+    <Content Include="Assets\Images\prefix\几内亚比绍.png" />
+    <Content Include="Assets\Images\prefix\列支敦士登.png" />
+    <Content Include="Assets\Images\prefix\刚果-（共和国）.png" />
+    <Content Include="Assets\Images\prefix\刚果-（民主党）.png" />
+    <Content Include="Assets\Images\prefix\利比亚.png" />
+    <Content Include="Assets\Images\prefix\利比里亚.png" />
+    <Content Include="Assets\Images\prefix\加拿大.png" />
+    <Content Include="Assets\Images\prefix\加纳.png" />
+    <Content Include="Assets\Images\prefix\加蓬.png" />
+    <Content Include="Assets\Images\prefix\匈牙利.png" />
+    <Content Include="Assets\Images\prefix\千里和多巴哥.png" />
+    <Content Include="Assets\Images\prefix\南苏丹.png" />
+    <Content Include="Assets\Images\prefix\南非洲.png" />
+    <Content Include="Assets\Images\prefix\博茨瓦纳.png" />
+    <Content Include="Assets\Images\prefix\卡塔尔.png" />
+    <Content Include="Assets\Images\prefix\卢旺达.png" />
+    <Content Include="Assets\Images\prefix\卢森堡.png" />
+    <Content Include="Assets\Images\prefix\印度.png" />
+    <Content Include="Assets\Images\prefix\印度尼西亚.png" />
+    <Content Include="Assets\Images\prefix\危地马拉.png" />
+    <Content Include="Assets\Images\prefix\厄瓜多尔.png" />
+    <Content Include="Assets\Images\prefix\厄立特里亚.png" />
+    <Content Include="Assets\Images\prefix\叙利亚.png" />
+    <Content Include="Assets\Images\prefix\古巴.png" />
+    <Content Include="Assets\Images\prefix\台湾.png" />
+    <Content Include="Assets\Images\prefix\吉尔吉斯斯坦.png" />
+    <Content Include="Assets\Images\prefix\吉布提.png" />
+    <Content Include="Assets\Images\prefix\哈萨克斯坦.png" />
+    <Content Include="Assets\Images\prefix\哥伦比亚.png" />
+    <Content Include="Assets\Images\prefix\哥斯达黎加.png" />
+    <Content Include="Assets\Images\prefix\喀麦隆.png" />
+    <Content Include="Assets\Images\prefix\图瓦卢.png" />
+    <Content Include="Assets\Images\prefix\土库曼斯坦.png" />
+    <Content Include="Assets\Images\prefix\土耳其.png" />
+    <Content Include="Assets\Images\prefix\圣保罗-圣多美和普林西.png" />
+    <Content Include="Assets\Images\prefix\圣克里斯多福和尼维斯.png" />
+    <Content Include="Assets\Images\prefix\圣卢西亚.png" />
+    <Content Include="Assets\Images\prefix\圣文森特和最格林纳丁斯.png" />
+    <Content Include="Assets\Images\prefix\圣马力诺.png" />
+    <Content Include="Assets\Images\prefix\圭亚那.png" />
+    <Content Include="Assets\Images\prefix\坦桑尼亚.png" />
+    <Content Include="Assets\Images\prefix\埃及.png" />
+    <Content Include="Assets\Images\prefix\埃塞俄比亚.png" />
+    <Content Include="Assets\Images\prefix\基里巴斯.png" />
+    <Content Include="Assets\Images\prefix\塔吉克斯坦.png" />
+    <Content Include="Assets\Images\prefix\塞内加尔.png" />
+    <Content Include="Assets\Images\prefix\塞尔维亚.png" />
+    <Content Include="Assets\Images\prefix\塞拉利昂.png" />
+    <Content Include="Assets\Images\prefix\塞浦路斯.png" />
+    <Content Include="Assets\Images\prefix\塞舌尔.png" />
+    <Content Include="Assets\Images\prefix\墨西哥.png" />
+    <Content Include="Assets\Images\prefix\多哥.png" />
+    <Content Include="Assets\Images\prefix\多明尼加共和国.png" />
+    <Content Include="Assets\Images\prefix\多米尼加.png" />
+    <Content Include="Assets\Images\prefix\奥地利.png" />
+    <Content Include="Assets\Images\prefix\委内瑞拉.png" />
+    <Content Include="Assets\Images\prefix\孟加拉国.png" />
+    <Content Include="Assets\Images\prefix\安提瓜和巴布达.png" />
+    <Content Include="Assets\Images\prefix\安道尔.png" />
+    <Content Include="Assets\Images\prefix\密克罗尼西亚-（联邦）.png" />
+    <Content Include="Assets\Images\prefix\尼加拉瓜.png" />
+    <Content Include="Assets\Images\prefix\尼日利亚.png" />
+    <Content Include="Assets\Images\prefix\尼日尔.png" />
+    <Content Include="Assets\Images\prefix\尼泊尔.png" />
+    <Content Include="Assets\Images\prefix\巴哈马.png" />
+    <Content Include="Assets\Images\prefix\巴基斯坦.png" />
+    <Content Include="Assets\Images\prefix\巴巴多斯.png" />
+    <Content Include="Assets\Images\prefix\巴布亚新几内亚.png" />
+    <Content Include="Assets\Images\prefix\巴拉圭.png" />
+    <Content Include="Assets\Images\prefix\巴拿马.png" />
+    <Content Include="Assets\Images\prefix\巴林.png" />
+    <Content Include="Assets\Images\prefix\巴西.png" />
+    <Content Include="Assets\Images\prefix\布基纳法索.png" />
+    <Content Include="Assets\Images\prefix\布隆迪.png" />
+    <Content Include="Assets\Images\prefix\希腊.png" />
+    <Content Include="Assets\Images\prefix\帕劳.png" />
+    <Content Include="Assets\Images\prefix\德国.png" />
+    <Content Include="Assets\Images\prefix\意大利.png" />
+    <Content Include="Assets\Images\prefix\所罗门岛.png" />
+    <Content Include="Assets\Images\prefix\拉脱维亚.png" />
+    <Content Include="Assets\Images\prefix\挪威.png" />
+    <Content Include="Assets\Images\prefix\捷克共和国.png" />
+    <Content Include="Assets\Images\prefix\摩尔多瓦.png" />
+    <Content Include="Assets\Images\prefix\摩洛哥.png" />
+    <Content Include="Assets\Images\prefix\摩纳哥.png" />
+    <Content Include="Assets\Images\prefix\文莱.png" />
+    <Content Include="Assets\Images\prefix\斐济.png" />
+    <Content Include="Assets\Images\prefix\斯威士兰.png" />
+    <Content Include="Assets\Images\prefix\斯洛伐克.png" />
+    <Content Include="Assets\Images\prefix\斯洛文尼亚.png" />
+    <Content Include="Assets\Images\prefix\斯里兰卡.png" />
+    <Content Include="Assets\Images\prefix\新加坡.png" />
+    <Content Include="Assets\Images\prefix\新西兰.png" />
+    <Content Include="Assets\Images\prefix\日本.png" />
+    <Content Include="Assets\Images\prefix\智利.png" />
+    <Content Include="Assets\Images\prefix\朝鲜.png" />
+    <Content Include="Assets\Images\prefix\柬埔寨.png" />
+    <Content Include="Assets\Images\prefix\格林纳达.png" />
+    <Content Include="Assets\Images\prefix\格鲁吉亚.png" />
+    <Content Include="Assets\Images\prefix\梵蒂冈城.png" />
+    <Content Include="Assets\Images\prefix\比利时.png" />
+    <Content Include="Assets\Images\prefix\毛里塔尼亚.png" />
+    <Content Include="Assets\Images\prefix\毛里求斯.png" />
+    <Content Include="Assets\Images\prefix\汤加.png" />
+    <Content Include="Assets\Images\prefix\沙特阿拉伯.png" />
+    <Content Include="Assets\Images\prefix\法国.png" />
+    <Content Include="Assets\Images\prefix\波兰.png" />
+    <Content Include="Assets\Images\prefix\波斯尼亚和黑塞哥维那.png" />
+    <Content Include="Assets\Images\prefix\泰国.png" />
+    <Content Include="Assets\Images\prefix\津巴布韦.png" />
+    <Content Include="Assets\Images\prefix\洪都拉斯.png" />
+    <Content Include="Assets\Images\prefix\海地.png" />
+    <Content Include="Assets\Images\prefix\澳大利亚.png" />
+    <Content Include="Assets\Images\prefix\爱尔兰.png" />
+    <Content Include="Assets\Images\prefix\爱沙尼亚.png" />
+    <Content Include="Assets\Images\prefix\牙买加.png" />
+    <Content Include="Assets\Images\prefix\玻利维亚.png" />
+    <Content Include="Assets\Images\prefix\瑙鲁.png" />
+    <Content Include="Assets\Images\prefix\瑞典.png" />
+    <Content Include="Assets\Images\prefix\瑞士.png" />
+    <Content Include="Assets\Images\prefix\瓦努阿图.png" />
+    <Content Include="Assets\Images\prefix\白俄罗斯.png" />
+    <Content Include="Assets\Images\prefix\科威特.png" />
+    <Content Include="Assets\Images\prefix\科摩罗.png" />
+    <Content Include="Assets\Images\prefix\科特迪瓦.png" />
+    <Content Include="Assets\Images\prefix\科索沃.png" />
+    <Content Include="Assets\Images\prefix\秘鲁.png" />
+    <Content Include="Assets\Images\prefix\突尼斯.png" />
+    <Content Include="Assets\Images\prefix\立陶宛.png" />
+    <Content Include="Assets\Images\prefix\索马里.png" />
+    <Content Include="Assets\Images\prefix\约旦.png" />
+    <Content Include="Assets\Images\prefix\纳米比亚.png" />
+    <Content Include="Assets\Images\prefix\缅甸.png" />
+    <Content Include="Assets\Images\prefix\罗马尼亚.png" />
+    <Content Include="Assets\Images\prefix\美国.png" />
+    <Content Include="Assets\Images\prefix\老挝.png" />
+    <Content Include="Assets\Images\prefix\肯尼亚.png" />
+    <Content Include="Assets\Images\prefix\芬兰.png" />
+    <Content Include="Assets\Images\prefix\苏丹.png" />
+    <Content Include="Assets\Images\prefix\苏里南.png" />
+    <Content Include="Assets\Images\prefix\英国.png" />
+    <Content Include="Assets\Images\prefix\荷兰.png" />
+    <Content Include="Assets\Images\prefix\莫桑比克.png" />
+    <Content Include="Assets\Images\prefix\莱索托.png" />
+    <Content Include="Assets\Images\prefix\菲律宾.png" />
+    <Content Include="Assets\Images\prefix\萨尔瓦多.png" />
+    <Content Include="Assets\Images\prefix\萨摩亚.png" />
+    <Content Include="Assets\Images\prefix\葡萄牙.png" />
+    <Content Include="Assets\Images\prefix\蒙古.png" />
+    <Content Include="Assets\Images\prefix\西班牙.png" />
+    <Content Include="Assets\Images\prefix\贝宁.png" />
+    <Content Include="Assets\Images\prefix\赞比亚.png" />
+    <Content Include="Assets\Images\prefix\赤道几内亚.png" />
+    <Content Include="Assets\Images\prefix\越南.png" />
+    <Content Include="Assets\Images\prefix\阿塞拜疆.png" />
+    <Content Include="Assets\Images\prefix\阿富汗.png" />
+    <Content Include="Assets\Images\prefix\阿尔及利亚.png" />
+    <Content Include="Assets\Images\prefix\阿尔巴尼亚.png" />
+    <Content Include="Assets\Images\prefix\阿拉伯联合酋长国.png" />
+    <Content Include="Assets\Images\prefix\阿曼.png" />
+    <Content Include="Assets\Images\prefix\阿根廷.png" />
+    <Content Include="Assets\Images\prefix\韩国.png" />
+    <Content Include="Assets\Images\prefix\香港.png" />
+    <Content Include="Assets\Images\prefix\马其顿.png" />
+    <Content Include="Assets\Images\prefix\马尔代夫.png" />
+    <Content Include="Assets\Images\prefix\马拉维.png" />
+    <Content Include="Assets\Images\prefix\马来西亚.png" />
+    <Content Include="Assets\Images\prefix\马绍尔群岛.png" />
+    <Content Include="Assets\Images\prefix\马耳他.png" />
+    <Content Include="Assets\Images\prefix\马达加斯加.png" />
+    <Content Include="Assets\Images\prefix\马里.png" />
+    <Content Include="Assets\Images\prefix\黎巴嫩.png" />
+    <Content Include="Assets\Images\prefix\黑山.png" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="View\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\GuidePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SplashPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TaskPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.8</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Services.Store.Engagement">
+      <Version>10.1901.28001</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAzure.Messaging.Managed">
+      <Version>0.1.7.9</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\Airport.en-US.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.Advertising.Xaml, Version=10.0">
+      <Name>Microsoft Advertising SDK for XAML</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.Services.Store.Engagement, Version=10.0">
+      <Name>Microsoft Engagement Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsMobile, Version=10.0.10240.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.PriResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

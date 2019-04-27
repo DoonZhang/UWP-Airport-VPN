@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About.Content" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="AboutInfo.Text" xml:space="preserve">
+    <value>本软件仅为用户提供Shadowsocks等第三方软件的账号以供浏览全球网络及网络加速使用，而Shadowsocks等第三方软件的开发及维护不归于本平台管理，但本平台会尽力协助用户正确配置和使用账号，详情请联系客服或进行反馈。联系邮箱：admin@mepstudio.cn</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>国际机场</value>
+  </data>
+  <data name="Encryption.Text" xml:space="preserve">
+    <value>加密方式：</value>
+  </data>
+  <data name="EnterInfo.Content" xml:space="preserve">
+    <value>同意并使用</value>
+  </data>
+  <data name="FeedBack.Content" xml:space="preserve">
+    <value>异常反馈</value>
+  </data>
+  <data name="Free.Text" xml:space="preserve">
+    <value>共享账号</value>
+  </data>
+  <data name="GuideUseRegulations.Text" xml:space="preserve">
+    <value>用户使用前请务必知晓并遵守以下条款：
+
+1、软件仅提供账号信息，请不要将软件账号在非法途径使用，不要浏览色情暴力、宗教迷信或政治敏感网站或信息，否则触及法律问题与开发者无关。
+2、由于受政策原因，请大家不要将账号分享给其他用户或网站使用，否则账号可能会被GFW(长城防火墙)屏蔽，导致无法使用。
+3、如账号出现无法使用的情况，请及时联系客服或提交异常反馈。
+4、用户支付少量费用均是用户自愿以捐赠的名义予以本平台做以支持和维护基本运行，若由于政策及不可抗拒因素导致软件平台最终无法使用，是无法做退回处理的，请悉知。
+
+为了您的稳定使用，请大家自觉遵守，营造绿色上网环境。</value>
+  </data>
+  <data name="Home.Content" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="IP.Text" xml:space="preserve">
+    <value>服  务  器：</value>
+  </data>
+  <data name="Menu.Text" xml:space="preserve">
+    <value>菜单</value>
+  </data>
+  <data name="More.Content" xml:space="preserve">
+    <value>更多</value>
+  </data>
+  <data name="MoreSubscription.Content" xml:space="preserve">
+    <value>更多订阅</value>
+  </data>
+  <data name="Notice.Text" xml:space="preserve">
+    <value>公告：暂无公告！</value>
+  </data>
+  <data name="Password.Text" xml:space="preserve">
+    <value>密        码：</value>
+  </data>
+  <data name="Port.Text" xml:space="preserve">
+    <value>端        口：</value>
+  </data>
+  <data name="Pro.Text" xml:space="preserve">
+    <value>订阅账号</value>
+  </data>
+  <data name="Push.Header" xml:space="preserve">
+    <value>推送通知</value>
+  </data>
+  <data name="Push_Info.Text" xml:space="preserve">
+    <value>打开并接收推送通知，可及时收到账号更新等通知。</value>
+  </data>
+  <data name="ReadMe.Content" xml:space="preserve">
+    <value>阅读条款</value>
+  </data>
+  <data name="RemoveAD.Content" xml:space="preserve">
+    <value>跳过广告</value>
+  </data>
+  <data name="RemoveADInfo" xml:space="preserve">
+    <value>订阅'跳过任务'服务
+
+订阅'跳过任务'服务可享受:
+
+1、跳过广告任务直接获取账号(不包括软件内其他位置的些非必需操作性广告)
+2、获得提醒功能。
+注意:由于账号所涉及的服务器资源市场价格波动，订阅价格可能会根据市场稍作调整，如用户对改变后的价格不满意可以取消次月订阅，请以当前订阅价格为准，一经订阅，在订阅当月不予退款。
+是否同意并订阅?</value>
+  </data>
+  <data name="Settings.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Settings_Btn.Content" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Share.Content" xml:space="preserve">
+    <value>分享</value>
+  </data>
+  <data name="SubscriptAccount.Content" xml:space="preserve">
+    <value>订阅账号</value>
+  </data>
+  <data name="SubscriptAccountInfo" xml:space="preserve">
+    <value>订阅账号可享受：
+
+1、获得稳定的专线账号
+2、跳过广告任务获取账号(不包括软件内其他位置的一些非必需操作性广告)
+3、获得账号更新推送提醒功能。
+
+注意:由于账号所涉及的服务器资源市场价格波动，订阅价格可能会根据市场稍作调整，如用户对改变后的价格不满意可以取消次月订阅，请以当前订阅价格为准，一经订阅，在订阅当月不予退款
+
+是否同意并订阅?</value>
+  </data>
+  <data name="SubscriptMore" xml:space="preserve">
+    <value>官网包含更多类别包时或包量套餐，支付简单，价格优惠，免费账户每日签到可获流星，推荐订阅。
+
+购买软件和在官网订阅的区别在于：
+
+购买软件的特点是可以享受一次购买永久使用共享账号，但是由于共享账号的用户较多，网速和稳定性不能保证，适合一般上网用户，购买软件并订阅账号的用户除了拥有永久使用共享账号的功能外，还包括免注册直接使用不限速不限流量的独享账号，适合视频和游戏用户。
+
+官网订阅的特点是价格多样和套餐丰富，有包时和包量两大类套餐，可以根据自身情况选择合适的套餐，但官网订阅需要重新注册账号并且官网订阅的规则较多，可能会因为违反审计规则而被暂时限速，详情请进入官网查看。
+
+注意:目前软件和官网数据暂时不互通。</value>
+  </data>
+  <data name="Suggest.Text" xml:space="preserve">
+    <value>更多订阅里包含时或包量套餐，每日签到可获得免费流量，强烈推荐</value>
+    <comment>订阅建议</comment>
+  </data>
+  <data name="Switch.Text" xml:space="preserve">
+    <value>切换线路</value>
+  </data>
+  <data name="Tittle.Text" xml:space="preserve">
+    <value>一键获取节点</value>
+  </data>
+  <data name="UseRegulations.Content" xml:space="preserve">
+    <value>使用条例</value>
+  </data>
+  <data name="UseRegulationsInfo.Text" xml:space="preserve">
+    <value>软件仅提供账号信息，请不要将软件账号在非法途径使用，不要浏览恐怖暴力、宗教迷信或政治敏感网站或信息，否则触及法律问题与开发者无关，请大家阻绝遵守，营造绿色上网环境。</value>
+  </data>
+  <data name="UserGuide.Content" xml:space="preserve">
+    <value>使用说明</value>
+  </data>
+</root>

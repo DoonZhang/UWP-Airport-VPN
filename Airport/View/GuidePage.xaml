@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Airport.View.GuidePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <FlipView>
+            <FlipViewItem Background="#483048">
+                <Image Source="ms-appx:///Assets/Images/Guide/1.png"/>
+            </FlipViewItem>
+
+            <FlipViewItem Background="#38383a">
+                <Grid>
+                    <Image Source="ms-appx:///Assets/Images/guide/2.png"/>
+
+                    <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" x:Uid="ReadMe" Margin="0,0,0,20" BorderThickness="0" FontSize="22" Background="#332DAE79" RequestedTheme="Dark">
+                        <Button.Flyout>
+                            <Flyout Placement="Full">
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock x:Uid="GuideUseRegulations" Width="300" TextWrapping="Wrap"/>
+                                    <Button x:Uid="EnterInfo" Click="Enter_Click" FontSize="17" HorizontalAlignment="Center" Margin="0,30,0,0" BorderThickness="0" />
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                </Grid>
+            </FlipViewItem>
+
+        </FlipView>
+    </Grid>
+</Page>

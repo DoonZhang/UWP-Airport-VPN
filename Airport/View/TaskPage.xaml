@@ -1,0 +1,123 @@
+﻿<Page
+    x:Class="Airport.View.TaskPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+   Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <WebView Width="0" Height="0" Source="http://s.moreplay.cn/index.php?c=home"/>
+        <StackPanel>
+            <TextBlock Text="任务奖励" FontSize="25"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="完成点击广告任务,获得账号奖励! 任务2选1,点击广告后将自动跳转。" />
+        </StackPanel>
+        <Grid 
+            x:Name="ButtonsPanel"
+            Background="#FF3191A6"
+            Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <Grid 
+                Background="#FFe5254f"
+                Width="60"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Grid.Row="0">
+                    <TextBlock x:Name="cachedTextBlock" 
+                       HorizontalAlignment="Left"
+                       Grid.Row="1"
+                       TextWrapping="Wrap" 
+                       Text="推荐" 
+                       VerticalAlignment="Top" 
+                       Margin="5,0,0,0"
+                       FontWeight="Bold"
+                       FontSize="10"
+                       Foreground="White" />
+                </Grid>
+
+                <TextBlock x:Name="placement1TextBlock" 
+                       HorizontalAlignment="Center"
+                       Grid.Row="0"
+                       TextWrapping="Wrap" 
+                       Text="任务1" 
+                       VerticalAlignment="Center" 
+                       FontWeight="Bold" Foreground="White"/>
+                <TextBlock x:Name="Loading" 
+                       HorizontalAlignment="Center"
+                       TextWrapping="Wrap" 
+                       Text="加载中，请稍等..." 
+                       VerticalAlignment="Center"
+                       FontSize="12"
+                       FontWeight="Bold" Foreground="White"/>
+                <StackPanel x:Name="AD_1" Tapped="AD_1_Tapped" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
+                    <TextBlock x:Name="AD_info_1" FontSize="15" FontWeight="Bold" TextAlignment="Center" Foreground="#FF212C6C"/>
+                    <Image x:Name="AD_img_1" Height="100" Width="300"/>
+                </StackPanel>
+
+                <!-- <WebView x:Name="Web_AD_1" Width="300" Height="150" Loaded="Web_AD_1_Loaded" Margin="0,20,0,0"/>
+           -->
+            </StackPanel>
+
+            <StackPanel  Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="621,20,620,0" Height="20" Width="39">
+                <TextBlock x:Name="placement2TextBlock" 
+                       HorizontalAlignment="Center"
+                       Grid.Row="1"
+                       TextWrapping="Wrap" 
+                       Text="任务2"                       
+                       VerticalAlignment="Center"                      
+                       FontWeight="Bold" Foreground="White"/>
+            </StackPanel>
+
+            <Grid 
+                Background="#FFcbd0d3"
+                Height="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Top"
+                Grid.Row="1"/>
+            <StackPanel   Grid.Row="1">
+                <TextBlock x:Name="placement3TextBlock" 
+                       HorizontalAlignment="Center"                   
+                       TextWrapping="Wrap" 
+                       Text="任务2" 
+                       VerticalAlignment="Center" 
+                       FontWeight="Bold" Foreground="White"/>
+                <TextBlock x:Name="Loading2" 
+                       HorizontalAlignment="Center"
+                       TextWrapping="Wrap" 
+                       Text="加载中，请稍等..." 
+                       VerticalAlignment="Center"
+                       FontSize="12"
+                       FontWeight="Bold" Foreground="White"/>
+                <StackPanel x:Name="AD_2" Tapped="AD_2_Tapped" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
+                    <TextBlock x:Name="AD_info_2" FontSize="15" FontWeight="Bold" TextAlignment="Center" Foreground="#FF212C6C"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Image x:Name="AD_img_2" Height="100" Width="120"/>
+                        <Image Source="ms-appx:///Assets/Images/Others/zfb.jpg" Width="120"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+        <AppBarButton HorizontalAlignment="Right" Icon="Help">
+            <Button.Flyout>
+                <Flyout Placement="Left">
+                    <TextBlock FontSize="12" TextWrapping="Wrap" TextAlignment="Center">
+                    <LineBreak/>
+                    如无法开始任务，请稍等一会再试！如有问题请反馈
+                    <LineBreak/>              
+                    <LineBreak/> *由于搭建服务器成本较大，希望大家多多支持开发者。
+                    </TextBlock>
+                </Flyout>
+            </Button.Flyout>
+        </AppBarButton>
+    </Grid>
+</Page>

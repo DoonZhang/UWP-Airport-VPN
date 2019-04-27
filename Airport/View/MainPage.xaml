@@ -1,0 +1,223 @@
+﻿<Page
+    x:Class="Airport.View.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#FF28A7E0" Loaded="Page_Loaded">
+
+    <Grid x:Name="RootGrid" >
+        <WebView Width="0" Height="0" Source="http://s.moreplay.cn/index.php?c=home" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+        <Button x:Name="Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="20" Click="Menu_Click" VerticalAlignment="Top" Background="{x:Null}" RequestedTheme="Dark" />
+        <Ellipse x:Name="RedPoint" Width="6" Margin="0,5,5,0" Height="5" Fill="Red" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" />
+        <Button FontFamily="Segoe MDL2 Assets" Content="&#xEBDB;" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Right" Background="{x:Null}" RequestedTheme="Dark" Click="Notice_Click">
+            <Button.Flyout>
+                <Flyout>
+                    <StackPanel Width="200">
+                        <TextBlock x:Name="Notice" x:Uid="Notice" TextWrapping="Wrap" FontSize="12" />
+                        <StackPanel Margin="0,10,0,0">
+                            <TextBlock Text="关注微信公众号，及时反馈异常，不定时发送账号福利！" TextWrapping="Wrap" FontSize="12"/>
+                            <Image Source="ms-appx:///Assets/Images/Others/wxgzh.jpg" Height="100" Width="100" Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="title" x:Uid="Tittle" FontFamily="Microsoft JhengHei" RequestedTheme="Dark"  FontSize="50" Margin="0,0,0,20"/>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" PointerMoved="Start_PointerMoved" PointerExited="Start_PointerExited" Holding="Start_Holding" KeyDown="Start_KeyDown">
+                <Ellipse x:Name="btn_free_bg" Width="150" Height="150" Fill="#FFEEBF5B" />
+                <Ellipse x:Name="btn_pro_bg" Width="150" Height="150" Fill="#FF48E6BB" Visibility="Collapsed" />
+                <Ellipse x:Name="btn_click_bg" Width="150" Height="150" Fill="White" Opacity="0.2" Visibility="Collapsed" />
+                <Image Width="150" Height="150" Source="/Assets/Images/btn/fly.png" Tapped="Get_Tapped"/>
+                <ProgressRing x:Name="Loading" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" />
+            </Grid>
+            <Grid>
+                <StackPanel>
+                    <Button FontFamily="Segoe MDL2 Assets" Content="&#xE8AB;" FontSize="20" Background="{x:Null}" RequestedTheme="Dark" Click="SwitchPro_Click"/>
+                    <Grid>
+                        <TextBlock x:Name="free" x:Uid="Free" FontSize="12" HorizontalAlignment="Left" RequestedTheme="Dark"/>
+                        <TextBlock x:Name="pro"  x:Uid="Pro" FontSize="12" HorizontalAlignment="Left" RequestedTheme="Dark" Visibility="Collapsed"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel>
+                    <Button x:Name="Refresh" FontFamily="Segoe MDL2 Assets" Content="&#xE117;" FontSize="20" Click="Switch_Click" VerticalAlignment="Bottom" Background="{x:Null}" HorizontalAlignment="Right" RequestedTheme="Dark">
+                        <Button.Flyout>
+                            <Flyout>
+                                <ListView x:Name="Nations" Height="150" Width="80" 
+                                          ItemsSource="{Binding}"
+                                          IsItemClickEnabled="True" 
+                                          ItemClick="Nations_ItemClick">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Height="20" Source="{Binding picUrl}"/>
+                                                <TextBlock Text="{Binding title}" Margin="5,0,0,0"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                    <TextBlock x:Uid="Switch" FontSize="12" HorizontalAlignment="Right" RequestedTheme="Dark"/>
+                </StackPanel>
+            </Grid>
+            <Grid x:Name="List" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30,0,0" Visibility="Collapsed">
+                <StackPanel>
+                    <Image x:Name="Nations_img" Height="35" VerticalAlignment="Top"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel>
+                            <TextBlock x:Uid="IP" FontFamily="Microsoft JhengHei" RequestedTheme="Dark" FontSize="25"/>
+                            <TextBlock x:Uid="Port" FontFamily="Microsoft JhengHei" RequestedTheme="Dark" FontSize="25"/>
+                            <TextBlock x:Uid="Password" FontFamily="Microsoft JhengHei" RequestedTheme="Dark" FontSize="25"/>
+                            <TextBlock x:Uid="Encryption" FontFamily="Microsoft JhengHei" RequestedTheme="Dark" FontSize="25"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock x:Name="IP" FontFamily="Microsoft JhengHei" Height="35" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                            <TextBlock x:Name="Port" FontFamily="Microsoft JhengHei" Height="35" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                            <TextBlock x:Name="Password" FontFamily="Microsoft JhengHei" Height="35" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                            <TextBlock x:Name="Encryption" FontFamily="Microsoft JhengHei" Height="35" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <SplitView DisplayMode="CompactOverlay" CompactPaneLength="0" IsPaneOpen="False" OpenPaneLength="150"  x:Name="MenuView" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="25*" />
+                        <RowDefinition Height="13*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" >
+                        <Button x:Name="MainMenu" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="20" Click="Menu_Click"  />
+                        <TextBlock x:Uid="Menu" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="18"/>
+                    </StackPanel>
+                    <ListView Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+
+                        <StackPanel Orientation="Horizontal" Tapped="Home_Tapped" >
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE10F;" VerticalAlignment="Center"/>
+                            <Button x:Uid="Home" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Tapped="Help_Tapped" >
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE8B7;" VerticalAlignment="Center"/>
+                            <Button x:Uid="UserGuide" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+<!--
+                        <StackPanel Orientation="Horizontal" Tapped="RemoveAD_Tapped">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE10A;" VerticalAlignment="Center"/>
+                            <Button x:Uid="RemoveAD" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+-->
+                        <StackPanel Orientation="Horizontal" Tapped="Subscription_Tapped">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE719;" VerticalAlignment="Center"/>
+                            <Button x:Uid="SubscriptAccount" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Tapped="SubscriptionMore_Tapped">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE7BF;" VerticalAlignment="Center"/>
+                            <Button x:Uid="MoreSubscription" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+                        <TextBlock x:Uid="Suggest"  FontSize="12" TextWrapping="Wrap" />
+                    </ListView>
+
+                    <StackPanel Grid.Row="2" Margin="10,0,0,0">
+                        <StackPanel Orientation="Horizontal" Tapped="Feedback_Tapped" Margin="0,10,0,0">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE939;" VerticalAlignment="Center"/>
+                            <Button x:Uid="FeedBack" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Tapped="Setting_Tapped" Margin="0,10,0,0">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE115;" VerticalAlignment="Center"/>
+                            <Button x:Uid="Settings_Btn" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Tapped="More_Tapped" Margin="0,10,0,0">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE10C;" VerticalAlignment="Center"/>
+                            <Button x:Uid="More" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </SplitView.Pane>
+        </SplitView>
+
+        <SplitView x:Name="SettingsView" DisplayMode="CompactOverlay" CompactPaneLength="0" IsPaneOpen="False" OpenPaneLength="150"  Grid.RowSpan="2" Grid.ColumnSpan="2" PanePlacement="Right">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="25*" />
+                        <RowDefinition Height="15*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <TextBlock x:Uid="Settings" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="24"/>
+                        <StackPanel HorizontalAlignment="Stretch" Margin="5,5,5,5">
+                            <ToggleSwitch x:Name="Push_Switch" x:Uid="Push" Toggled="Push_Switch_Toggled" />
+                            <TextBlock x:Uid="Push_Info" TextWrapping="Wrap" FontSize="12" Foreground="#FF423D3D" />
+                        </StackPanel>
+                    </StackPanel>
+                    <ListView Grid.Row="1" Grid.RowSpan="2">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+
+                        <StackPanel Orientation="Horizontal" Tapped="Share_Tapped">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE72D;" VerticalAlignment="Center"/>
+                            <Button x:Uid="Share" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE814;" VerticalAlignment="Center"/>
+                            <Button x:Uid="UseRegulations"  Background="{x:Null}" Margin="5,0,0,0">
+                                <Button.Flyout>
+                                    <Flyout Placement="Bottom">
+                                        <StackPanel Height="100" Width="300">
+                                            <TextBlock x:Uid="UseRegulationsInfo" TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Flyout>
+                                </Button.Flyout>
+                            </Button>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE171;" VerticalAlignment="Center"/>
+                            <Button x:Uid="About"  Background="{x:Null}" Margin="5,0,0,0">
+                                <Button.Flyout>
+                                    <Flyout Placement="Bottom">
+                                        <StackPanel Height="130" Width="300">
+                                            <TextBlock x:Uid="AboutInfo" TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Flyout>
+                                </Button.Flyout>
+                            </Button>
+                        </StackPanel>
+                        
+                    </ListView>
+                    <StackPanel Grid.Row="2" Margin="10,0,0,0">
+                        <StackPanel Orientation="Horizontal" Tapped="More_Tapped" Margin="0,10,0,0">
+                            <TextBlock FontSize="25" FontFamily="Segoe MDL2 Assets" Text="&#xE10C;" VerticalAlignment="Center"/>
+                            <Button Content="更多" Background="{x:Null}" Margin="5,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </SplitView.Pane>
+        </SplitView>
+    </Grid>
+                   
+    
+</Page>
