@@ -25,6 +25,8 @@ namespace Airport.Model
             public JP JP { get; set; }
             public KR KR { get; set; }
             public HK HK { get; set; }
+            public UK UK { get; set; }
+            public ZH ZH { get; set; }
         }
         public class Ss
         {
@@ -32,6 +34,8 @@ namespace Airport.Model
             public JP JP { get; set; }
             public KR KR { get; set; }
             public HK HK { get; set; }
+            public UK UK { get; set; }
+            public ZH ZH { get; set; }
         }
 
         public class US
@@ -41,6 +45,33 @@ namespace Airport.Model
         }
 
         public class US_List
+        {
+            public string ip { get; set; }
+            public string port { get; set; }
+            public string pw { get; set; }
+            public string jm { get; set; }
+        }
+        public class ZH
+        {
+            public string ZH_num { get; set; }
+            public ZH_List[] ZH_list { get; set; }
+        }
+
+        public class ZH_List
+        {
+            public string ip { get; set; }
+            public string port { get; set; }
+            public string pw { get; set; }
+            public string jm { get; set; }
+        }
+
+        public class UK
+        {
+            public string UK_num { get; set; }
+            public US_List[] UK_list { get; set; }
+        }
+
+        public class UK_List
         {
             public string ip { get; set; }
             public string port { get; set; }

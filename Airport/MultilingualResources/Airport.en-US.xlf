@@ -203,6 +203,34 @@
           <source>分享</source>
           <target state="new">分享</target>
         </trans-unit>
+        <trans-unit id="AlreadySubscript" translate="yes" xml:space="preserve">
+          <source>您已订阅了服务，请不要重复订阅。</source>
+          <target state="new">您已订阅了服务，请不要重复订阅。</target>
+        </trans-unit>
+        <trans-unit id="CancelSubscript" translate="yes" xml:space="preserve">
+          <source>购买没有完成。可能已经取消了购买。</source>
+          <target state="new">购买没有完成。可能已经取消了购买。</target>
+        </trans-unit>
+        <trans-unit id="NetError" translate="yes" xml:space="preserve">
+          <source>网络异常，请检查网络！</source>
+          <target state="new">网络异常，请检查网络！</target>
+        </trans-unit>
+        <trans-unit id="NetErrorSubFail" translate="yes" xml:space="preserve">
+          <source>由于服务器或网络错误，购买不成功。</source>
+          <target state="new">由于服务器或网络错误，购买不成功。</target>
+        </trans-unit>
+        <trans-unit id="NoSubscript" translate="yes" xml:space="preserve">
+          <source>此订阅暂不提供！</source>
+          <target state="new">此订阅暂不提供！</target>
+        </trans-unit>
+        <trans-unit id="SubscriptError" translate="yes" xml:space="preserve">
+          <source>订阅出现一些问题，请稍后再试！</source>
+          <target state="new">订阅出现一些问题，请稍后再试！</target>
+        </trans-unit>
+        <trans-unit id="SuccessSubscript" translate="yes" xml:space="preserve">
+          <source>您已成功订阅此服务一个月！</source>
+          <target state="new">您已成功订阅此服务一个月！</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -123,8 +123,14 @@
   <data name="AboutInfo.Text" xml:space="preserve">
     <value>本软件仅为用户提供Shadowsocks等第三方软件的账号以供浏览全球网络及网络加速使用，而Shadowsocks等第三方软件的开发及维护不归于本平台管理，但本平台会尽力协助用户正确配置和使用账号，详情请联系客服或进行反馈。联系邮箱：admin@mepstudio.cn</value>
   </data>
+  <data name="AlreadySubscript" xml:space="preserve">
+    <value>您已订阅了服务，请不要重复订阅。</value>
+  </data>
   <data name="AppName" xml:space="preserve">
     <value>国际机场</value>
+  </data>
+  <data name="CancelSubscript" xml:space="preserve">
+    <value>购买没有完成。可能已经取消了购买。</value>
   </data>
   <data name="Encryption.Text" xml:space="preserve">
     <value>加密方式：</value>
@@ -162,6 +168,15 @@
   </data>
   <data name="MoreSubscription.Content" xml:space="preserve">
     <value>更多订阅</value>
+  </data>
+  <data name="NetError" xml:space="preserve">
+    <value>网络异常，请检查网络！</value>
+  </data>
+  <data name="NetErrorSubFail" xml:space="preserve">
+    <value>由于服务器或网络错误，购买不成功。</value>
+  </data>
+  <data name="NoSubscript" xml:space="preserve">
+    <value>此订阅暂不提供！</value>
   </data>
   <data name="Notice.Text" xml:space="preserve">
     <value>公告：暂无公告！</value>
@@ -220,6 +235,9 @@
 
 是否同意并订阅?</value>
   </data>
+  <data name="SubscriptError" xml:space="preserve">
+    <value>订阅出现一些问题，请稍后再试！</value>
+  </data>
   <data name="SubscriptMore" xml:space="preserve">
     <value>官网包含更多类别包时或包量套餐，支付简单，价格优惠，免费账户每日签到可获流星，推荐订阅。
 
@@ -230,6 +248,9 @@
 官网订阅的特点是价格多样和套餐丰富，有包时和包量两大类套餐，可以根据自身情况选择合适的套餐，但官网订阅需要重新注册账号并且官网订阅的规则较多，可能会因为违反审计规则而被暂时限速，详情请进入官网查看。
 
 注意:目前软件和官网数据暂时不互通。</value>
+  </data>
+  <data name="SuccessSubscript" xml:space="preserve">
+    <value>您已成功订阅此服务一个月！</value>
   </data>
   <data name="Suggest.Text" xml:space="preserve">
     <value>更多订阅里包含时或包量套餐，每日签到可获得免费流量，强烈推荐</value>

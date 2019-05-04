@@ -47,8 +47,7 @@ namespace Airport.View
         private string AccoutJson = "";
         JObject JSON;
         Rootobject account;
-        String _Nations = "";
-        int Quantity_ss;
+        String _Nations = "US";
         ApplicationDataContainer settings = ApplicationData.Current.LocalSettings;
         ResourceContext resourceContext = ResourceContext.GetForViewIndependentUse();
         ResourceMap resourceMap = ResourceManager.Current.MainResourceMap.GetSubtree("Resources");
@@ -107,6 +106,7 @@ namespace Airport.View
         private void Get_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Get_ss_true();
+            Nations_img.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/prefix/美国.png"));
             /*
             Get_Enable.ad_finashed = false;
 
@@ -134,14 +134,12 @@ namespace Airport.View
                 Frame.Navigate(typeof(TaskPage));
             }
             */
-
         }
 
         bool IsError = false;  
         async void Get_ss_true()
         {
             // await Analysis_Json();
-            string ip, port, pw, jm;
             Loading.IsActive = true;
 
             string Uri = "http://s.moreplay.cn/apps/ss/ss.json";
@@ -152,9 +150,9 @@ namespace Airport.View
                 AccoutJson = await client.GetStringAsync(uri);
             }
             catch 
-            {
-                //  System.Diagnostics.Debug.WriteLine("ErrorCode: " + e);
-                var messageDig = new MessageDialog("error！网络异常，请检查网络！");
+            { //  System.Diagnostics.Debug.WriteLine("ErrorCode: " + e);
+                var NetError = resourceMap.GetValue("NetError", resourceContext);
+                var messageDig = new MessageDialog(NetError.ValueAsString);
                 //展示窗口，获取按钮是否退出  
                 var result = await messageDig.ShowAsync();
                 IsError = true;
@@ -165,27 +163,29 @@ namespace Airport.View
 
                 JsonSerializer json = JsonSerializer.Create();
                 account = json.Deserialize<Rootobject>(new JsonTextReader(new StringReader(AccoutJson)));
-                test();
 
                 // 将Json对象解析为Json字符串
                 //     ToJsonObject(AccoutJson);
-                //如何订阅版账号
-                if (isPro == true) {
 
-                    JArray ss_pro_array = JArray.Parse(JSON["ss_pro"].ToString());
-                  //  JArray jlist = JArray.Parse(JSON["ss"].ToString());
+                //如何订阅版账号
+                if (isPro == true)
+                {
+                    ss_pro();
+                    //  JArray ss_pro_array = JArray.Parse(JSON["ss_pro"].ToString());
+                    //  JArray jlist = JArray.Parse(JSON["ss"].ToString());
                 }
+                else ss();
 
                     //获取JSON中SS账号的具体数量
-                    int Quantity_ss = (int)JSON["quantity_ss"];
+                //    int Quantity_ss = (int)JSON["quantity_ss"];
 
                     //  System.Diagnostics.Debug.WriteLine(e.Message);
                     //将SS账号组成数组
-                    JArray jlist = JArray.Parse(JSON["ss"].ToString());
+            //        JArray jlist = JArray.Parse(JSON["ss"].ToString());
 
-                    Random rnd = new Random();
+             //       Random rnd = new Random();
                     //从以下范围内随机取值
-                    int r = rnd.Next(0, Quantity_ss);
+              //      int r = rnd.Next(0, Quantity_ss);
                     /*
                     jlist.ToObject<List<Items>>();
                     List<Items> items = ((JArray)jlist).Select(x => new Items
@@ -195,6 +195,7 @@ namespace Airport.View
                         PW = (string)x["pw"]
                     }).ToList();
                     */
+                    /*
                     string ss_Str = string.Join("", jlist[r]);//数组转成字符串
                     ss_Str = ss_Str.TrimEnd('"');
                     ss_Str = ss_Str.TrimStart('"');
@@ -208,7 +209,7 @@ namespace Airport.View
                 Port.Text = (string)ss_Arr["port"];
                 Password.Text = (string)ss_Arr["pw"];
                 Encryption.Text = (string)ss_Arr["jm"];
-
+                */
                 Loading.IsActive = false;
                 List.Visibility = Visibility.Visible;
                 title.Visibility = Visibility.Collapsed;
@@ -218,47 +219,108 @@ namespace Airport.View
                             //展示窗口，获取按钮是否退出  
                             var result = await messageDig.ShowAsync();
                         }
-                        */
-                
+                        */               
             }
         }
-        void test() {
+        void ss_pro() {
+            Random rnd = new Random();
             switch (_Nations)
             {
-                case "US" :
-                    //获取JSON中SS账号的具体数量
-                    Quantity_ss = Convert.ToInt32(account.ss_pro.US.US_num);
-                    //将SS账号组成数组
-                    JArray jlist = JArray.Parse(JSON["US_list"].ToString());
-                    Random rnd = new Random();
-            //从以下范围内随机取值
-            int r = rnd.Next(0, Quantity_ss);
-            string ss_Str = string.Join("", jlist[r]);//数组转成字符串
-            ss_Str = ss_Str.TrimEnd('"');
-            ss_Str = ss_Str.TrimStart('"');
-            Regex r1 = new Regex("\"\"");
-            ss_Str = r1.Replace(ss_Str, "\",\"", Quantity_ss - 2);
-            ss_Str = "{\"" + ss_Str + "\"}";
-            //将随机获取到的账号数组转化为json
-            JObject ss_Arr = (JObject)JsonConvert.DeserializeObject(ss_Str);
-
-            IP.Text = (string)ss_Arr["ip"];
-            Port.Text = (string)ss_Arr["port"];
-            Password.Text = (string)ss_Arr["pw"];
-            Encryption.Text = (string)ss_Arr["jm"];
+                case "US" :                   
+                    //从获取JSON中SS账号的具体数量以下范围内随机取值
+                    int random_num = rnd.Next(0, Convert.ToInt32(account.ss_pro.US.US_num));
+                    IP.Text = account.ss_pro.US.US_list[random_num].ip;
+                    Port.Text = account.ss_pro.US.US_list[random_num].port;
+                    Password.Text = account.ss_pro.US.US_list[random_num].pw;
+                    Encryption.Text = account.ss_pro.US.US_list[random_num].jm;
                     break;
                 case "UK":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss_pro.UK.UK_num));
+                    IP.Text = account.ss_pro.UK.UK_list[random_num].ip;
+                    Port.Text = account.ss_pro.UK.UK_list[random_num].port;
+                    Password.Text = account.ss_pro.UK.UK_list[random_num].pw;
+                    Encryption.Text = account.ss_pro.UK.UK_list[random_num].jm;
                     break;
                 case "HK":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss_pro.HK.HK_num));
+                    IP.Text = account.ss_pro.HK.HK_list[random_num].ip;
+                    Port.Text = account.ss_pro.HK.HK_list[random_num].port;
+                    Password.Text = account.ss_pro.HK.HK_list[random_num].pw;
+                    Encryption.Text = account.ss_pro.HK.HK_list[random_num].jm;
                     break;
                 case "ZH":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss_pro.ZH.ZH_num));
+                    IP.Text = account.ss_pro.ZH.ZH_list[random_num].ip;
+                    Port.Text = account.ss_pro.ZH.ZH_list[random_num].port;
+                    Password.Text = account.ss_pro.ZH.ZH_list[random_num].pw;
+                    Encryption.Text = account.ss_pro.ZH.ZH_list[random_num].jm;
                     break;
                 case "JP":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss_pro.JP.JP_num));
+                    IP.Text = account.ss_pro.JP.JP_list[random_num].ip;
+                    Port.Text = account.ss_pro.JP.JP_list[random_num].port;
+                    Password.Text = account.ss_pro.JP.JP_list[random_num].pw;
+                    Encryption.Text = account.ss_pro.JP.JP_list[random_num].jm;
                     break;
+                case "KR":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss_pro.KR.KR_num));
+                    IP.Text = account.ss_pro.KR.KR_list[random_num].ip;
+                    Port.Text = account.ss_pro.KR.KR_list[random_num].port;
+                    Password.Text = account.ss_pro.KR.KR_list[random_num].pw;
+                    Encryption.Text = account.ss_pro.KR.KR_list[random_num].jm;
+                    break;
+            }         
+        }
 
+        void ss()
+        {
+            Random rnd = new Random();
+            switch (_Nations)
+            {
+                case "US":
+                    //从获取JSON中SS账号的具体数量以下范围内随机取值
+                    int random_num = rnd.Next(0, Convert.ToInt32(account.ss.US.US_num));
+                    IP.Text = account.ss.US.US_list[random_num].ip;
+                    Port.Text = account.ss.US.US_list[random_num].port;
+                    Password.Text = account.ss.US.US_list[random_num].pw;
+                    Encryption.Text = account.ss.US.US_list[random_num].jm;
+                    break;
+                case "UK":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss.UK.UK_num));
+                    IP.Text = account.ss.UK.UK_list[random_num].ip;
+                    Port.Text = account.ss.UK.UK_list[random_num].port;
+                    Password.Text = account.ss.UK.UK_list[random_num].pw;
+                    Encryption.Text = account.ss.UK.UK_list[random_num].jm;
+                    break;
+                case "HK":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss.HK.HK_num));
+                    IP.Text = account.ss.HK.HK_list[random_num].ip;
+                    Port.Text = account.ss.HK.HK_list[random_num].port;
+                    Password.Text = account.ss.HK.HK_list[random_num].pw;
+                    Encryption.Text = account.ss.HK.HK_list[random_num].jm;
+                    break;
+                case "ZH":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss.ZH.ZH_num));
+                    IP.Text = account.ss.ZH.ZH_list[random_num].ip;
+                    Port.Text = account.ss.ZH.ZH_list[random_num].port;
+                    Password.Text = account.ss.ZH.ZH_list[random_num].pw;
+                    Encryption.Text = account.ss.ZH.ZH_list[random_num].jm;
+                    break;
+                case "JP":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss.JP.JP_num));
+                    IP.Text = account.ss.JP.JP_list[random_num].ip;
+                    Port.Text = account.ss.JP.JP_list[random_num].port;
+                    Password.Text = account.ss.JP.JP_list[random_num].pw;
+                    Encryption.Text = account.ss.JP.JP_list[random_num].jm;
+                    break;
+                case "KR":
+                    random_num = rnd.Next(0, Convert.ToInt32(account.ss.KR.KR_num));
+                    IP.Text = account.ss.KR.KR_list[random_num].ip;
+                    Port.Text = account.ss.KR.KR_list[random_num].port;
+                    Password.Text = account.ss.KR.KR_list[random_num].pw;
+                    Encryption.Text = account.ss.KR.KR_list[random_num].jm;
+                    break;
             }
-           
-
         }
 
         private void Clear_Tapped(object sender, TappedRoutedEventArgs e)
@@ -308,12 +370,9 @@ namespace Airport.View
                 {
                     RedPoint.Visibility = Visibility.Visible;
                 }
-            }
-            catch
+            }catch
             {
-
             }
-
             //判断是否打开推送开关,如何打开则显示开关
             if ((bool)settings.Values["Push_Enable"] == true)
             {
@@ -377,8 +436,7 @@ namespace Airport.View
                 btn_pro_bg.Visibility = Visibility.Visible;
                 isPro = true;
                 n += 1;
-            }
-            else {
+            }else {
                 free.Visibility = Visibility.Visible;
                 pro.Visibility = Visibility.Collapsed;
                 btn_pro_bg.Visibility = Visibility.Collapsed;
@@ -405,6 +463,8 @@ namespace Airport.View
         { //松下按键区域不显示灰色
             btn_click_bg.Visibility = Visibility.Collapsed;
         }
+
+
         private void Switch_Click(object sender, RoutedEventArgs e)
         {          
             ObservableCollection<data> listData = new ObservableCollection<data>();
@@ -423,7 +483,7 @@ namespace Airport.View
                 case "US":
                     // Nations_img.Source=new ImageBrush("ms-appx:///Assets/Images/prefix/美国.png");
                     Nations_img.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/prefix/美国.png"));
-                    _Nations = "US";
+                    _Nations = "US";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                     break;
                 case "JP":
                     Nations_img.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/prefix/日本.png"));
@@ -449,9 +509,7 @@ namespace Airport.View
             public string picUrl { get; set; }
         }
         private async void SubscriptionMore_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-           
-            // Here you load the resource you need
+        { // Here you load the resource you need
             var resourceValue = resourceMap.GetValue("SubscriptMore", resourceContext);
             var messageDig = new MessageDialog(resourceValue.ValueAsString);         
             messageDig.Commands.Add(new UICommand("Yes"));
@@ -465,8 +523,7 @@ namespace Airport.View
             }
         }
         private async void Subscription_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            // Here you load the resource you need
+        {// Here you load the resource you need
             var resourceValue = resourceMap.GetValue("SubscriptAccountInfo", resourceContext);
             var messageDig = new MessageDialog(resourceValue.ValueAsString);
             messageDig.Commands.Add(new UICommand("Yes"));
@@ -479,8 +536,7 @@ namespace Airport.View
                 Loading.IsActive = true; productID = subscriptionStoreId;
                 // 购买加载项的一系列操作
                 await SetupSubscriptionInfoAsync();
-            }
-            else
+            }else
             {
                 Loading.IsActive = false;
             }
@@ -518,7 +574,8 @@ namespace Airport.View
             if (userOwnsSubscription)
             {
                 Loading.IsActive = false;
-                var messageDig = new MessageDialog("您已订阅此服务！");
+                var AlreadySubscript = resourceMap.GetValue("AlreadySubscript", resourceContext);
+                var messageDig = new MessageDialog(AlreadySubscript.ValueAsString);
                 //展示窗口，获取按钮是否退出  
                 var result = await messageDig.ShowAsync();
                 // 解锁所有加载项订阅的特性功能
@@ -530,7 +587,8 @@ namespace Airport.View
             if (subscriptionStoreProduct == null)
             {
                 Loading.IsActive = false;
-                var messageDig = new MessageDialog("此订阅暂不提供！");
+                var NoSubscript = resourceMap.GetValue("NoSubscript", resourceContext);
+                var messageDig = new MessageDialog(NoSubscript.ValueAsString);
                 //展示窗口，获取按钮是否退出  
                 var result = await messageDig.ShowAsync();
                 return;
@@ -595,7 +653,8 @@ namespace Airport.View
             if (result.ExtendedError != null)
             {
                 Loading.IsActive = false;
-                var messageDig1 = new MessageDialog("获得此订阅时出现了一些问题。");
+                var SubscriptError = resourceMap.GetValue("SubscriptError", resourceContext);
+                var messageDig1 = new MessageDialog(SubscriptError.ValueAsString);
                 //展示窗口，获取按钮是否退出  
                 var result1 = await messageDig1.ShowAsync();
                 return null;
@@ -631,14 +690,16 @@ namespace Airport.View
                     //显示一个UI来确认客户已经购买了您的订阅
                     //并解锁订阅的特性。
                     Loading.IsActive = false;
-                    var messageDig1 = new MessageDialog("您已成功订阅此服务一个月！");
+                    var SuccessSubscript = resourceMap.GetValue("SuccessSubscript", resourceContext);
+                    var messageDig1 = new MessageDialog(SuccessSubscript.ValueAsString);
                     //展示窗口，获取按钮是否退出  
                     var result1 = await messageDig1.ShowAsync();
                     break;
 
                 case StorePurchaseStatus.NotPurchased:
                     Loading.IsActive = false;
-                    var messageDig2 = new MessageDialog("购买没有完成。可能已经取消了购买。");
+                    var CancelSubscript = resourceMap.GetValue("CancelSubscript", resourceContext);
+                    var messageDig2 = new MessageDialog(CancelSubscript.ValueAsString);
                     //展示窗口，获取按钮是否退出  
                     var result2 = await messageDig2.ShowAsync();
                     break;
@@ -646,14 +707,16 @@ namespace Airport.View
                 case StorePurchaseStatus.ServerError:
                 case StorePurchaseStatus.NetworkError:
                     Loading.IsActive = false;
-                    var messageDig3 = new MessageDialog("由于服务器或网络错误，购买不成功。");
+                    var NetErrorSubFail = resourceMap.GetValue("NetErrorSubFail", resourceContext);
+                    var messageDig3 = new MessageDialog(NetErrorSubFail.ValueAsString);
                     //展示窗口，获取按钮是否退出  
                     var result3 = await messageDig3.ShowAsync();
                     break;
 
                 case StorePurchaseStatus.AlreadyPurchased:
                     Loading.IsActive = false;
-                    var messageDig4 = new MessageDialog("已经拥有此订阅。");
+                    var AlreadySubscript = resourceMap.GetValue("AlreadySubscript", resourceContext);
+                    var messageDig4 = new MessageDialog(AlreadySubscript.ValueAsString);
                     //展示窗口，获取按钮是否退出  
                     var result4 = await messageDig4.ShowAsync();
                     break;

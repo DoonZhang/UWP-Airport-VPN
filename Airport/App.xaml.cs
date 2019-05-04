@@ -69,8 +69,7 @@ namespace Airport
             if (e.PrelaunchActivated == false)
             {
                 if (rootFrame.Content == null)
-                {
-                    // 当导航堆栈尚未还原时，导航到第一页，
+                {// 当导航堆栈尚未还原时，导航到第一页，
                     // 并通过将所需信息作为导航参数传入来配置
                     // 参数
                     rootFrame.Navigate(typeof(View.SplashPage), e.Arguments);
@@ -118,28 +117,23 @@ namespace Airport
                     //注册推送通知
                     var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
                     var hub = new NotificationHub(hub_name, DefaultListenSharedAccessSignature);
-
                     //判断是否打开推送开关,如何打开则显示开并且注册推送通知,否则关闭
                     if ((bool)settings.Values["Push_Enable"] == true)
-                    {
-                        //上传注册的通道
+                    {//上传注册的通道
                         var result = await hub.RegisterNativeAsync(channel.Uri);
                     }
                     else
-                    {
-                        //关闭通道
+                    { //关闭通道
                         channel.Close();
                     }
                 }
                 else
-                {
-                    //如果不存在Push_Enable这个键就说明默认没有打开接收通知，无需注册通知通道
+                {//如果不存在Push_Enable这个键就说明默认没有打开接收通知，无需注册通知通道
                     settings.Values["Push_Enable"] = false;
                 }
             }
             catch
-            {
-                /*
+            {/*
                 var dialog = new MessageDialog("网络异常!请检查网络" );
                 await dialog.ShowAsync();
                 */
