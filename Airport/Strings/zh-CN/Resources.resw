@@ -138,6 +138,9 @@
   <data name="EnterInfo.Content" xml:space="preserve">
     <value>同意并使用</value>
   </data>
+  <data name="Exit.Content" xml:space="preserve">
+    <value>退出</value>
+  </data>
   <data name="FeedBack.Content" xml:space="preserve">
     <value>异常反馈</value>
   </data>
@@ -159,6 +162,9 @@
   </data>
   <data name="IP.Text" xml:space="preserve">
     <value>服  务  器：</value>
+  </data>
+  <data name="Laugeage.Content" xml:space="preserve">
+    <value>语言</value>
   </data>
   <data name="Menu.Text" xml:space="preserve">
     <value>菜单</value>

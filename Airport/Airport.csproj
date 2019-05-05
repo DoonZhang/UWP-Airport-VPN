@@ -19,6 +19,13 @@
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <PackageCertificateKeyFile>Airport_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>93F578B403DBB5ACA283527EE66B61CBCE3DBDE4</PackageCertificateThumbprint>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>E:\VS生成包\国际机场\</AppxPackageDir>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -150,8 +157,8 @@
     </AppxManifest>
     <None Include="Airport_StoreKey.pfx" />
     <None Include="Airport_TemporaryKey.pfx" />
-    <PRIResource Include="Strings\zh-CN\Resources.resw" />
     <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\zh-CN\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\btn\fly.png" />
@@ -445,10 +452,6 @@
     <PackageReference Include="WindowsAzure.Messaging.Managed">
       <Version>0.1.7.9</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <XliffResource Include="MultilingualResources\Airport.en-US.xlf" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.Advertising.Xaml, Version=10.0">

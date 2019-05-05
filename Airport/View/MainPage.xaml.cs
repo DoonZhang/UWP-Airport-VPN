@@ -106,7 +106,10 @@ namespace Airport.View
         private void Get_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Get_ss_true();
-            Nations_img.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/prefix/美国.png"));
+            if (_Nations == "US") {
+                Nations_img.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/prefix/美国.png"));
+            }
+            
             /*
             Get_Enable.ad_finashed = false;
 
@@ -737,6 +740,22 @@ namespace Airport.View
             //flash.jpg是示例代码中Asssets文件夹中的图片，可以将其改为你自己的图片
             request.Data.SetBitmap(RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/Others/wxgzh.jpg")));
             deferral.Complete();
-        }  
+        }
+
+        private async void Chinese_Click(object sender, RoutedEventArgs e)
+        {
+            ApplicationData.Current.LocalSettings.Values["CurrentLanguage"] = "Chinese";
+            var messageDig = new MessageDialog("切换成功，重启软件生效！");
+            //展示窗口，获取按钮是否退出  
+            var result = await messageDig.ShowAsync();
+        }
+
+        private async void English_Click(object sender, RoutedEventArgs e)
+        {
+            ApplicationData.Current.LocalSettings.Values["CurrentLanguage"] ="English";
+            var messageDig = new MessageDialog("Switch Successful, Restart Software Effective");
+            //展示窗口，获取按钮是否退出  
+            var result = await messageDig.ShowAsync();
+        }
     }
 }

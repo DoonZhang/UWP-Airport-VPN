@@ -10,8 +10,10 @@ using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Globalization;
 using Windows.Networking.PushNotifications;
 using Windows.Storage;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -44,6 +46,11 @@ namespace Airport
         /// <param name="e">有关启动请求和过程的详细信息。</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            //设置启动窗口和最小窗口大小
+            ApplicationView.PreferredLaunchViewSize = new Size(450, 800);
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(300, 600));
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
             //调用Azure推送添加到新的InitNotificationsAsync方法
             InitNotificationsAsync();
             Frame rootFrame = Window.Current.Content as Frame;
@@ -77,6 +84,30 @@ namespace Airport
                 // 确保当前窗口处于活动状态
                 Window.Current.Activate();
             }
+            //判断settings容器里面有没有"First"这个键
+            if (!ApplicationData.Current.LocalSettings.Values.ContainsKey("CurrentLanguage"))
+            { //应用首次启动，必定不会含"First"这个键，让应用导航到GuidePage这个页面，GuidePage这个页面就是对应用的介绍啦
+                ApplicationData.Current.LocalSettings.Values["CurrentLanguage"] = "null";
+            }
+            if (ApplicationData.Current.LocalSettings.Values["CurrentLanguage"] != null)
+            {
+               var strCurrentLanguage = ApplicationData.Current.LocalSettings.Values["CurrentLanguage"].ToString();
+                if (strCurrentLanguage == "Chinese")
+                {
+                    ApplicationLanguages.PrimaryLanguageOverride = "zh-cn";
+                }else if (strCurrentLanguage == "English")
+                    ApplicationLanguages.PrimaryLanguageOverride = "en-us";
+                else
+                {
+                    ApplicationLanguages.PrimaryLanguageOverride = "zh-cn";
+                }
+            }
+            else
+            {
+                ApplicationLanguages.PrimaryLanguageOverride = "zh-cn";
+            }
+            InitializeComponent();
+
         }
 
         /// <summary>

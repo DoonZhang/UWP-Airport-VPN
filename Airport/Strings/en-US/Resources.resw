@@ -1,5 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -12,4 +117,153 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About.Content" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutInfo.Text" xml:space="preserve">
+    <value>This software only provides users with accounts of third-party software such as Shadowsocks for browsing the global network and accelerating the use of the network. The development and maintenance of third-party software such as Shadowsocks are not under the management of this platform, but this platform will do its best to assist users in the correct configuration and use of accounts. For details, please contact customer service or feedback. Contact email: admin@mepstudio.cn</value>
+  </data>
+  <data name="AlreadySubscript" xml:space="preserve">
+    <value>You have subscribed to the service, please do not repeat your subscription.</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Airport</value>
+  </data>
+  <data name="CancelSubscript" xml:space="preserve">
+    <value>The purchase was not completed. The purchase may have been cancelled.</value>
+  </data>
+  <data name="Encryption.Text" xml:space="preserve">
+    <value>Encryption mode:</value>
+  </data>
+  <data name="EnterInfo.Content" xml:space="preserve">
+    <value>Agree and use</value>
+  </data>
+  <data name="Exit.Content" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="FeedBack.Content" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="Free.Text" xml:space="preserve">
+    <value>Shared account</value>
+  </data>
+  <data name="GuideUseRegulations.Text" xml:space="preserve">
+    <value>Users should be aware of and abide by the following terms before using:
+1. Software only provides account information. Please don't use software account in illegal ways. Don't browse pornographic violence, religious superstition or politically sensitive websites or information. Otherwise, legal issues are not related to developers.
+2. For policy reasons, please do not share your account with other users or websites. Otherwise, your account may be blocked by GFW (Great Wall Firewall), which makes it unusable.
+3. If the account is unavailable, please contact customer service or submit abnormal feedback in time.
+4. Users pay a small amount of fees to support and maintain the basic operation of the platform voluntarily in the name of donations. If the software platform is ultimately unusable due to policy and irresistible factors, it can not be returned, please be informed.
+For your stable use, please consciously observe and create a green online environment.</value>
+  </data>
+  <data name="Home.Content" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="IP.Text" xml:space="preserve">
+    <value>Server IP:</value>
+  </data>
+  <data name="Laugeage.Content" xml:space="preserve">
+    <value>Laugeage</value>
+  </data>
+  <data name="Menu.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="More.Content" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="MoreSubscription.Content" xml:space="preserve">
+    <value>More subscriptions</value>
+  </data>
+  <data name="NetError" xml:space="preserve">
+    <value>Network abnormalities, please check the network!</value>
+  </data>
+  <data name="NetErrorSubFail" xml:space="preserve">
+    <value>The purchase was unsuccessful due to server or network errors.</value>
+  </data>
+  <data name="NoSubscript" xml:space="preserve">
+    <value>This subscription is not available yet!</value>
+  </data>
+  <data name="Notice.Text" xml:space="preserve">
+    <value>Announcement: No announcement yet!</value>
+  </data>
+  <data name="Password.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="Port.Text" xml:space="preserve">
+    <value>Port:</value>
+  </data>
+  <data name="Pro.Text" xml:space="preserve">
+    <value>Subscription account</value>
+  </data>
+  <data name="Push.Header" xml:space="preserve">
+    <value>Push</value>
+  </data>
+  <data name="Push_Info.Text" xml:space="preserve">
+    <value>Open and receive push notification, you can receive account updates and other notifications in time.</value>
+  </data>
+  <data name="ReadMe.Content" xml:space="preserve">
+    <value>Reading clause</value>
+  </data>
+  <data name="RemoveAD.Content" xml:space="preserve">
+    <value>Remove AD</value>
+  </data>
+  <data name="RemoveADInfo" xml:space="preserve">
+    <value>Subscribe to the'Skip Tasks'service
+Subscribe to the'Skip Tasks'service for enjoyment:
+1. Skip advertising tasks to get accounts directly (excluding non-essential operational advertisements in other locations of the software)
+2. Obtain reminder function.
+Note: Due to the fluctuation of the market price of the server resources involved in the account, the subscription price may be adjusted slightly according to the market. If the user is not satisfied with the changed price, he can cancel the next month's subscription. Please take the current subscription price as the criterion. Once subscribed, there will be no refund in the subscription month.
+Do you agree and subscribe?</value>
+  </data>
+  <data name="Settings.Text" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="Settings_Btn.Content" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="Share.Content" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="SubscriptAccount.Content" xml:space="preserve">
+    <value>Subscription account</value>
+  </data>
+  <data name="SubscriptAccountInfo" xml:space="preserve">
+    <value>Subscribe accounts to enjoy:
+1. Get a stable dedicated line account
+2. Skip the advertising task to get an account (excluding some non-essential operational advertisements in other locations of the software)
+3. Get account update push reminder function.
+Note: Due to the fluctuation of the market price of the server resources involved in the account, the subscription price may be adjusted slightly according to the market. If the user is not satisfied with the changed price, he can cancel the next month's subscription. Please take the current subscription price as the criterion. Once subscribed, there will be no refund in the subscription month.
+Do you agree and subscribe?</value>
+  </data>
+  <data name="SubscriptError" xml:space="preserve">
+    <value>There are some problems with subscription, please try again later!</value>
+  </data>
+  <data name="SubscriptMore" xml:space="preserve">
+    <value>Official website contains more categories of packages or packages, simple payment, price concessions, free account daily check-in can be meteors, recommended subscription.
+The difference between purchasing software and subscribing to the official website is that:
+The characteristic of purchasing software is to enjoy the permanent use of shared account at one time. However, because of the large number of users sharing account, network speed and stability can not be guaranteed. It is suitable for general Internet users. Users purchasing software and subscribing account not only have the function of permanent use of shared account, but also include unregistered and direct use of unique account with unlimited speed and flow, which is suitable for videos and videos. Game users.
+Official subscription is characterized by diversified prices and abundant packages. There are two types of packages: packages with time and packages. You can choose the appropriate packages according to your own situation. However, official subscription needs to re-register accounts and there are many rules for official subscription, which may be temporarily limited due to violation of audit rules. For details, please visit the official website.
+Note: At present, software and official network data are not interoperable.</value>
+  </data>
+  <data name="SuccessSubscript" xml:space="preserve">
+    <value>You have successfully subscribed to this service for one month!</value>
+  </data>
+  <data name="Suggest.Text" xml:space="preserve">
+    <value>More subscriptions include time limit or data limit. Free data traffic is available for daily check-in. It is highly recommended.</value>
+    <comment>订阅建议</comment>
+  </data>
+  <data name="Switch.Text" xml:space="preserve">
+    <value>Switching circuit</value>
+  </data>
+  <data name="Tittle.Text" xml:space="preserve">
+    <value>Get Node</value>
+  </data>
+  <data name="UseRegulations.Content" xml:space="preserve">
+    <value>Use Ordinance</value>
+  </data>
+  <data name="UseRegulationsInfo.Text" xml:space="preserve">
+    <value>The App only provides account information, please do not use the software account in illegal ways, do not browse terrorist violence, religious superstition or politically sensitive websites or information, otherwise touching legal issues has nothing to do with developers, please stop compliance, create a green online environment.</value>
+  </data>
+  <data name="UserGuide.Content" xml:space="preserve">
+    <value>Instructions</value>
+  </data>
 </root>
