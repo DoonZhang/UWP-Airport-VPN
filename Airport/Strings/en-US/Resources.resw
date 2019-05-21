@@ -121,7 +121,7 @@
     <value>About</value>
   </data>
   <data name="AboutInfo.Text" xml:space="preserve">
-    <value>This software only provides users with accounts of third-party software such as Shadowsocks for browsing the global network and accelerating the use of the network. The development and maintenance of third-party software such as Shadowsocks are not under the management of this platform, but this platform will do its best to assist users in the correct configuration and use of accounts. For details, please contact customer service or feedback. Contact email: admin@mepstudio.cn</value>
+    <value>This App only provides users with accounts of third-party software such as Shadowsocks for browsing the global network and accelerating the use of the network. The development and maintenance of third-party software such as Shadowsocks are not under the management of this platform, but this platform will do its best to assist users in the correct configuration and use of accounts. For details, please contact customer service or feedback. Contact email: admin@mepstudio.cn</value>
   </data>
   <data name="AlreadySubscript" xml:space="preserve">
     <value>You have subscribed to the service, please do not repeat your subscription.</value>
@@ -130,13 +130,19 @@
     <value>Airport</value>
   </data>
   <data name="CancelSubscript" xml:space="preserve">
-    <value>The purchase was not completed. The purchase may have been cancelled.</value>
+    <value>The purchase was not completed. Beacuse you have been cancelled.</value>
+  </data>
+  <data name="DeviceType.Text" xml:space="preserve">
+    <value>Device Type</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Shadowsocks VPN</value>
   </data>
   <data name="Encryption.Text" xml:space="preserve">
-    <value>Encryption mode:</value>
+    <value>Encryption Mode:</value>
   </data>
   <data name="EnterInfo.Content" xml:space="preserve">
-    <value>Agree and use</value>
+    <value>Agree and Enter</value>
   </data>
   <data name="Exit.Content" xml:space="preserve">
     <value>Exit</value>
@@ -146,6 +152,9 @@
   </data>
   <data name="Free.Text" xml:space="preserve">
     <value>Shared account</value>
+  </data>
+  <data name="Game" xml:space="preserve">
+    <value>Game Device</value>
   </data>
   <data name="GuideUseRegulations.Text" xml:space="preserve">
     <value>Users should be aware of and abide by the following terms before using:
@@ -214,6 +223,9 @@ Subscribe to the'Skip Tasks'service for enjoyment:
 Note: Due to the fluctuation of the market price of the server resources involved in the account, the subscription price may be adjusted slightly according to the market. If the user is not satisfied with the changed price, he can cancel the next month's subscription. Please take the current subscription price as the criterion. Once subscribed, there will be no refund in the subscription month.
 Do you agree and subscribe?</value>
   </data>
+  <data name="Router" xml:space="preserve">
+    <value>Router</value>
+  </data>
   <data name="Settings.Text" xml:space="preserve">
     <value>Setting</value>
   </data>
@@ -252,7 +264,7 @@ Note: At present, software and official network data are not interoperable.</val
     <comment>订阅建议</comment>
   </data>
   <data name="Switch.Text" xml:space="preserve">
-    <value>Switching circuit</value>
+    <value>Switch Circuit</value>
   </data>
   <data name="Tittle.Text" xml:space="preserve">
     <value>Get Node</value>

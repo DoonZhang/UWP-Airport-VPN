@@ -1,21 +1,13 @@
-﻿using Airport.Model;
-using Microsoft.Services.Store.Engagement;
+﻿using Microsoft.Services.Store.Engagement;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.DataTransfer;
-using Windows.ApplicationModel.Resources;
 using Windows.ApplicationModel.Resources.Core;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Networking.PushNotifications;
 using Windows.Services.Store;
 using Windows.Storage;
@@ -25,15 +17,9 @@ using Windows.UI.Notifications;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
-using Windows.UI.Xaml.Navigation;
-using static Airport.App;
 using static Airport.Model.Account;
-using static Airport.View.SplashPage;
 
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
 
@@ -66,9 +52,10 @@ namespace Airport.View
         {
             this.InitializeComponent();
         }
-        private async void Help_Tapped(object sender, TappedRoutedEventArgs e)
+        private void Help_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            await Launcher.LaunchUriAsync(new Uri("http://s.moreplay.cn/index.php?c=read&id=975&page=1"));
+            Frame.Navigate(typeof(HelpPage));
+           // await Launcher.LaunchUriAsync(new Uri("http://520ss.xyz/user/announcement"));
         }
         private void Notice_Click(object sender, RoutedEventArgs e)
         { //点击公告后就将红点取消

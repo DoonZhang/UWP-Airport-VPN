@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
+using Windows.ApplicationModel.Resources.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Globalization;
@@ -33,11 +34,15 @@ namespace Airport
         /// 初始化单一实例应用程序对象。这是执行的创作代码的第一行，
         /// 已执行，逻辑上等同于 main() 或 WinMain()。
         /// </summary>
+        /// 
+       
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
         }
+
 
         /// <summary>
         /// 在应用程序由最终用户正常启动时进行调用。
@@ -178,6 +183,7 @@ namespace Airport
             }
             */
         }
-  
+
+
     }
 }

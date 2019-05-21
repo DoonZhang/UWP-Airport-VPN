@@ -132,6 +132,12 @@
   <data name="CancelSubscript" xml:space="preserve">
     <value>购买没有完成。可能已经取消了购买。</value>
   </data>
+  <data name="DeviceType.Text" xml:space="preserve">
+    <value>设备类型</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>国际机场</value>
+  </data>
   <data name="Encryption.Text" xml:space="preserve">
     <value>加密方式：</value>
   </data>
@@ -146,6 +152,9 @@
   </data>
   <data name="Free.Text" xml:space="preserve">
     <value>共享账号</value>
+  </data>
+  <data name="Game" xml:space="preserve">
+    <value>游戏端</value>
   </data>
   <data name="GuideUseRegulations.Text" xml:space="preserve">
     <value>用户使用前请务必知晓并遵守以下条款：
@@ -217,6 +226,9 @@
 2、获得提醒功能。
 注意:由于账号所涉及的服务器资源市场价格波动，订阅价格可能会根据市场稍作调整，如用户对改变后的价格不满意可以取消次月订阅，请以当前订阅价格为准，一经订阅，在订阅当月不予退款。
 是否同意并订阅?</value>
+  </data>
+  <data name="Router" xml:space="preserve">
+    <value>路由器</value>
   </data>
   <data name="Settings.Text" xml:space="preserve">
     <value>设置</value>
